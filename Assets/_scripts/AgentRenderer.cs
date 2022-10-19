@@ -13,9 +13,9 @@ public class AgentRenderer : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void FaceDirection(int PointerArea)
+    public void FaceDirection(Vector2 mousePosition)
     {
-        if(PointerArea == 0)
+        if(mousePosition.x < 0.5)
         {
             spriteRenderer.flipX = true;
         }
