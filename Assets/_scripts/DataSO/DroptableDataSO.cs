@@ -15,21 +15,21 @@ public class DroptableDataSO : ScriptableObject
     }
 
     public List<Item> Items;
-
-    public List<GameObject> droptable;
+    [Range(0, 99)]
+    public int ChanceForExtraDrops;
+    [NonSerialized]
+    public List<GameObject> droptable = new();
 
     public void BuildDropTable()
     {
         //stops every chest and their mother from building the droptable
         if (droptable.Count > 0) return;
+        Debug.Log("Building Droptable");
         droptable = new List<GameObject>();
-        Debug.Log("building Droptable");
         foreach(var item in Items)
         {
-            Debug.Log("trying to add item");
             for(int i = 0; i < item.Weight; i++)
             {
-                Debug.Log("Item added");
                 droptable.Add(item.go);
             }
         }
