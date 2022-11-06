@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8589d22052b145547b6ebf3be74abf5a, type: 3}
   m_Name: DroptableBasic
   m_EditorClassIdentifier: 
-  Items: []
+  Items:
+  - go: {fileID: 3127251235067672624, guid: 9c4e0e97d1efeca41845b259abfb574c, type: 3}
+    Weight: 1
+  - go: {fileID: 5716777645359500760, guid: 61ad261dae852a0408e0a0749ffa5504, type: 3}
+    Weight: 1
+  - go: {fileID: 7378058188119973620, guid: fb1a752b59ec18b41aeee30563ea6ccf, type: 3}
+    Weight: 1
+  - go: {fileID: 2416628442620253506, guid: b1763b295174f774aa468017723d63f0, type: 3}
+    Weight: 1
+  ChanceForExtraDrops: 5
