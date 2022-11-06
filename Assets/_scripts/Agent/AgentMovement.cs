@@ -19,9 +19,13 @@ public class AgentMovement : MonoBehaviour
     [field: SerializeField]
     public UnityEvent<float> OnVelocityChange { get; set; }
 
+    [NonSerialized]
+    public float CurrentMaxSpeed;
+
     private void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        CurrentMaxSpeed = MovementData.maxSpeed;
     }
 
     public void MoveAgent(Vector2 movermentInput)
@@ -43,7 +47,7 @@ public class AgentMovement : MonoBehaviour
         {
             currentVelocity -= MovementData.deacceleration * Time.deltaTime;
         }
-        return Mathf.Clamp(currentVelocity, 0, MovementData.maxSpeed);
+        return Mathf.Clamp(currentVelocity, 0, CurrentMaxSpeed);
     }
 
     private void FixedUpdate()
