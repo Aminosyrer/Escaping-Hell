@@ -31,7 +31,7 @@ public class LootChest : MonoBehaviour
             if (x == DroptableData.droptable.Count) x = DroptableData.droptable.Count - 1;
             float itemx = transform.position.x + (Random.value * 2 - 1);
             float itemy = transform.position.y + (Random.value * 2 - 1);
-            Instantiate(DroptableData.droptable[x], new Vector3(itemx, itemy), transform.rotation);
+            Instantiate(DroptableData.droptable[x], transform.position, transform.rotation);
         }
         while (DroptableData.ChanceForExtraDrops > Random.value * 100);
         _SpriteRenderer.sprite = OpenChest;

@@ -12,11 +12,12 @@ public class PowerUpSpeed : PowerUp
         if (collision.tag == "Player")
         {
             AgentMovement agentMovement = collision.GetComponent<AgentMovement>();
+            //if this is ever null, i will stab a bitch
             if (agentMovement != null)
             {
                 agentMovement.CurrentMaxSpeed *= Increase;
             }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

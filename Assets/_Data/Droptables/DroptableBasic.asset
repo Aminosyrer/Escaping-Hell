@@ -21,4 +21,4 @@ MonoBehaviour:
     Weight: 1
   - go: {fileID: 2416628442620253506, guid: b1763b295174f774aa468017723d63f0, type: 3}
     Weight: 1
-  ChanceForExtraDrops: 5
+  ChanceForExtraDrops: 10

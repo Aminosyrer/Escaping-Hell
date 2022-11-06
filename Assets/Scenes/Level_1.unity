@@ -3643,11 +3643,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480007745675264795, guid: f6bc65642deb36d43a70ec01a685c761, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.534426
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4480007745675264795, guid: f6bc65642deb36d43a70ec01a685c761, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.585848
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 4480007745675264795, guid: f6bc65642deb36d43a70ec01a685c761, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5830,9 +5830,25 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.26415092
       objectReference: {fileID: 0}
+    - target: {fileID: 4006360025999710630, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026457852798, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026627043489, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043492, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026627043492, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_RootOrder
