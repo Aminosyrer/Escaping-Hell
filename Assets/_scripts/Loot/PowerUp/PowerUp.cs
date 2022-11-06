@@ -10,6 +10,15 @@ public class PowerUp : MonoBehaviour
     private void Awake()
     {
         Collider = GetComponent<BoxCollider2D>();
+        Collider.enabled = false;
+        Collider.isTrigger = false;
+        //waits just a moment so player can see what powerup just dropped
+        Invoke("Enable", 1);
+    }
+
+    private void Enable()
+    {
+        Collider.enabled = true;
         Collider.isTrigger = true;
     }
 
