@@ -13,7 +13,10 @@ public class AgentInput : MonoBehaviour
     public UnityEvent<Vector2> OnMovementKeyPressed { get; set; }
 
     [field: SerializeField]
-    public UnityEvent<Vector2> OnPointerPostionChange { get; set; }
+    public UnityEvent<Vector2> OnPointerPostionChangeView { get; set; }
+
+    [field: SerializeField]
+    public UnityEvent<Vector2> OnPointerPostionChangeWorld { get; set; }
 
     private void Awake()
     {
@@ -30,8 +33,10 @@ public class AgentInput : MonoBehaviour
     {
         Vector3 mousPos = Input.mousePosition;
         mousPos.z = mainCamera.nearClipPlane;
-        var mouseInWorldSpace = mainCamera.ScreenToViewportPoint(mousPos);
-        OnPointerPostionChange?.Invoke(mouseInWorldSpace);
+        var mouseInView = mainCamera.ScreenToViewportPoint(mousPos);
+        var mouseInWorld = mainCamera.ScreenToWorldPoint(mousPos);
+        OnPointerPostionChangeView?.Invoke(mouseInView);
+        OnPointerPostionChangeWorld?.Invoke(mouseInWorld);
     }
 
     private void GetMovementInput()
