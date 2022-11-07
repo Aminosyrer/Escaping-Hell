@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Powerups
   - Player
-  - 
-  - 
+  - Enemy
+  - EnemyMovementCollider
   - 
   - 
   - 
