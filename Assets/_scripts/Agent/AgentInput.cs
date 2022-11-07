@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class AgentInput : MonoBehaviour
 {
     private Camera mainCamera;
+    private bool fireButtonDown = false;
 
     [field: SerializeField]
     public UnityEvent<Vector2> OnMovementKeyPressed { get; set; }
@@ -18,6 +19,12 @@ public class AgentInput : MonoBehaviour
     [field: SerializeField]
     public UnityEvent<Vector2> OnPointerPostionChangeWorld { get; set; }
 
+    [field: SerializeField]
+    public UnityEvent OnFireButtonPressed { get; set; }
+
+    [field: SerializeField]
+    public UnityEvent OnFireButtonReleased { get; set; }
+
     private void Awake()
     {
         mainCamera = Camera.main;
@@ -27,6 +34,27 @@ public class AgentInput : MonoBehaviour
     {
         GetMovementInput();
         GetPointerInput();
+        GetFireInput();
+    }
+
+    private void GetFireInput()
+    {
+        if (Input.GetAxisRaw("Fire1") > 0)
+        {
+            if (fireButtonDown == false)
+            {
+                fireButtonDown = true;
+                OnFireButtonPressed?.Invoke();
+            }          
+        } 
+        else
+        {
+            if (fireButtonDown)
+            {
+                fireButtonDown = false;
+                OnFireButtonReleased?.Invoke();
+            }         
+        }
     }
 
     private void GetPointerInput()

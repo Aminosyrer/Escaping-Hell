@@ -123,7 +123,7 @@ TextureImporter:
         x: 17
         y: 197
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: player_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 197
+        x: 64
+        y: 198
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: player_2
       rect:
         serializedVersion: 2
-        x: 113
-        y: 197
+        x: 112
+        y: 198
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,7 +186,7 @@ TextureImporter:
         x: 161
         y: 197
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,7 +207,7 @@ TextureImporter:
         x: 209
         y: 197
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,7 +228,7 @@ TextureImporter:
         x: 257
         y: 197
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,7 +249,7 @@ TextureImporter:
         x: 17
         y: 149
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: player_7
       rect:
         serializedVersion: 2
-        x: 65
-        y: 149
+        x: 64
+        y: 150
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,7 +291,7 @@ TextureImporter:
         x: 113
         y: 149
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,7 +312,7 @@ TextureImporter:
         x: 161
         y: 149
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,7 +333,7 @@ TextureImporter:
         x: 209
         y: 149
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,7 +354,7 @@ TextureImporter:
         x: 257
         y: 149
         width: 15
-        height: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,6 +532,7 @@ TextureImporter:
       player_8: 431859266
       player_14: -11194885
       player_12: -1407755573
+      player_19: -802204455
       player_4: -2090023775
       player_5: -259948691
       player_0: -544697159

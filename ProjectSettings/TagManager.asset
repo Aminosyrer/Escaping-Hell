@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullets
+  - Player
+  - Enemy
+  - Obstacle
+  - EnemyMovementCollider
+  - PlayerMovementCollider
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
     locked: 0
   - name: WeaponLayer
     uniqueID: 234476451
+    locked: 0
+  - name: Forground
+    uniqueID: 3247612993
+    locked: 0
+  - name: Bullets
+    uniqueID: 2119803021
     locked: 0
