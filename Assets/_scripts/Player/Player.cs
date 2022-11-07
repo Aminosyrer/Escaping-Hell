@@ -8,6 +8,8 @@ public class Player : MonoBehaviour, IAgent, IHittable
     [field: SerializeField]
     public int Health { get; set; }
 
+    public int MaxHealth { get; set; }
+
     private bool dead = false;
 
 
