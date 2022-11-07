@@ -24,17 +24,20 @@ public class LootChest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        do
+        if (collision.gameObject.tag == "Player")
         {
-            int x = Mathf.FloorToInt(Random.value * DroptableData.droptable.Count);
-            //Best way to give a even chance for all entries in the droptable
-            if (x == DroptableData.droptable.Count) x = DroptableData.droptable.Count - 1;
-            float itemx = transform.position.x + (Random.value * 2 - 1);
-            float itemy = transform.position.y + (Random.value * 2 - 1);
-            Instantiate(DroptableData.droptable[x], transform.position, transform.rotation);
+            do
+            {
+                int x = Mathf.FloorToInt(Random.value * DroptableData.droptable.Count);
+                //Best way to give a even chance for all entries in the droptable
+                if (x == DroptableData.droptable.Count) x = DroptableData.droptable.Count - 1;
+                float itemx = transform.position.x + (Random.value * 2 - 1);
+                float itemy = transform.position.y + (Random.value * 2 - 1);
+                Instantiate(DroptableData.droptable[x], transform.position, transform.rotation);
+            }
+            while (DroptableData.ChanceForExtraDrops > Random.value * 100);
+            _SpriteRenderer.sprite = OpenChest;
+            Collider.enabled = false;
         }
-        while (DroptableData.ChanceForExtraDrops > Random.value * 100);
-        _SpriteRenderer.sprite = OpenChest;
-        Collider.enabled = false;
     }
 }
