@@ -12,10 +12,24 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     public int Health { get; private set; } = 2;
 
     [field: SerializeField]
+    public EnemyAttack enemyAttack { get; set; }
+
+    private bool dead = false;
+
+    [field: SerializeField]
     public UnityEvent OnGetHit { get; set; }
 
     [field: SerializeField]
     public UnityEvent OnDie { get; set; }
+
+    private void Awake()
+    {
+        if(enemyAttack == null)
+        {
+            enemyAttack = GetComponent<EnemyAttack>();
+        }
+    }
+
 
     private void Start()
     {
@@ -24,11 +38,31 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
 
     public void GetHit(int damage, GameObject damageDealer)
     {
-        Health--;
-        OnGetHit?.Invoke();
-        if (Health <= 0)
+        if(dead == false)
         {
-            Destroy(gameObject);
+            Health--;
+            OnGetHit?.Invoke();
+            if (Health <= 0)
+            {
+                dead = true;
+                OnDie?.Invoke();
+                StartCoroutine(WaitToDie());
+            }
         }
     }
+
+    IEnumerator WaitToDie()
+    {
+        yield return new WaitForSeconds(.54f);
+        Destroy(gameObject);
+    }
+
+    public void PerformAttack()
+    {
+        if(dead == false)
+        {
+            enemyAttack.Attack(EnemyData.Damage);
+        }
+    }
+
 }

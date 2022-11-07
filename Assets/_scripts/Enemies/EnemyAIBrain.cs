@@ -36,7 +36,10 @@ public class EnemyAIBrain : MonoBehaviour, IAgentInput
             OnMovementKeyPressed?.Invoke(Vector2.zero);
 
         }
-        CurrentState.UpdateState();
+        else
+        {
+            CurrentState.UpdateState();
+        }
     }
 
     public void Attack()
