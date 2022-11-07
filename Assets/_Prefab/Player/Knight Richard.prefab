@@ -137,7 +137,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1700623857, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Size.x
-      value: 0.9
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700623857, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1700623857, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Offset.y
@@ -177,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043492, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Knight Richard
       objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_RootOrder
