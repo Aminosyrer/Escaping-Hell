@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Smoking Candle
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 1706986230, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1240200956, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 130070629, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -705334927, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 12491294, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -541672301, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1086666011, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 148380463, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 1597488787, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 916257992, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1864371765, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1023934272, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 1042389506, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1893499843, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: 189255779, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1582941357, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -1038478358, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  - {fileID: -887242262, guid: ee730512f9bb66f49be6386abb525b64, type: 3}
+  m_MinSpeed: 12
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
