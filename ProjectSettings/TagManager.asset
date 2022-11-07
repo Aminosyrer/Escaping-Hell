@@ -11,10 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Bullets
+  - PlayerMovementCollider
+  - Powerups
+  - Player
+  - Enemy
+  - EnemyMovementCollider
   - 
   - 
   - 
@@ -40,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: WeaponLayer
+    uniqueID: 234476451
+    locked: 0
+  - name: Forground
+    uniqueID: 3247612993
+    locked: 0
+  - name: Bullets
+    uniqueID: 2119803021
     locked: 0
