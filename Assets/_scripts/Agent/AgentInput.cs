@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AgentInput : MonoBehaviour
+public class AgentInput : MonoBehaviour, IAgentInput
 {
     private Camera mainCamera;
     private bool fireButtonDown = false;
