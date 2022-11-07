@@ -9,7 +9,10 @@ public class HzardDamage : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale / 2, 0);
         foreach(var i in colliders)
         {
-            Destroy(i.gameObject);
+            if (i.GetComponent<IHittable>() != null)
+            {
+                i.GetComponent<IHittable>().GetHit(1, gameObject);
+            }
         }
     }
 }
