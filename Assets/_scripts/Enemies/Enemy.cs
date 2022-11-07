@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour, IHittable
+public class Enemy : MonoBehaviour, IHittable, IAgent
 {
     [field: SerializeField]
     public EnemyDataSO EnemyData { get; set; }
@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour, IHittable
 
     [field: SerializeField]
     public UnityEvent OnGetHit { get; set; }
+
+    [field: SerializeField]
+    public UnityEvent OnDie { get; set; }
 
     private void Start()
     {
