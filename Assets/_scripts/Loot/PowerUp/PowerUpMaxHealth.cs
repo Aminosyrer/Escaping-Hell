@@ -15,7 +15,7 @@ public class PowerUpMaxHealth : PowerUp
             if (player != null)
             {
                 player.Health += Increase;
-                player.MaxHealth = Increase;
+                player.MaxHealth += Increase;
             }
             Destroy(gameObject);
         }

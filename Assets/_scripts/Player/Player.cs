@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IAgent, IHittable
     [field: SerializeField]
     public int Health { get; set; }
 
+    [field: SerializeField]
     public int MaxHealth { get; set; }
 
     private bool dead = false;
@@ -18,6 +19,11 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     [field: SerializeField]
     public UnityEvent OnGetHit { get; set; }
+
+    public void Awake()
+    {
+        Health = MaxHealth;
+    }
 
     public void GetHit(int damage, GameObject damageDealer)
     {
