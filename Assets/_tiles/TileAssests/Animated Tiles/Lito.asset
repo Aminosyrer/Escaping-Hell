@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Lito
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 2e7e365ec47a49740a3e484531cdd8d9, type: 3}
+  - {fileID: 21300000, guid: 0fd517981094d6e4d9d67b9a1d3dd0ee, type: 3}
+  - {fileID: 21300000, guid: 06152b17f117cfe44bd0e872306f56c1, type: 3}
+  - {fileID: 21300000, guid: 440db02b364a4cd4d8a1716ed775605a, type: 3}
+  - {fileID: 21300000, guid: 821c1e1c0ffc0a342b3426b977b33ddb, type: 3}
+  - {fileID: 21300000, guid: 314c690d5cfea3f44a0d98432dddae40, type: 3}
+  - {fileID: 21300000, guid: ce399d5e68fccd649b996956984376fa, type: 3}
+  - {fileID: 21300000, guid: 6ad7dd0b71e074044906b8626b362810, type: 3}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
