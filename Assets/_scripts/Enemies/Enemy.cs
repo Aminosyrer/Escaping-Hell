@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     {
         if(dead == false)
         {
-            Health--;
+            Health -= damage;
             OnGetHit?.Invoke();
             if (Health <= 0)
             {

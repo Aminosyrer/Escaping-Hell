@@ -13,6 +13,8 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     private bool dead = false;
 
+    [SerializeField]
+    private bool invulnerable = false;
 
     [field: SerializeField]
     public UnityEvent OnDie { get; set; }
@@ -27,9 +29,11 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     public void GetHit(int damage, GameObject damageDealer)
     {
-        if (dead == false)
+        if (!dead && !invulnerable)
         {
-            Health--;
+            Health -= damage;
+            invulnerable = true;
+            Invoke("MakeVulnerable", 0.5f);
             OnGetHit?.Invoke();
             if (Health <= 0)
             {
@@ -38,6 +42,11 @@ public class Player : MonoBehaviour, IAgent, IHittable
                 StartCoroutine(DeathCoroutine());
             }
         }
+    }
+
+    private void MakeVulnerable()
+    {
+        invulnerable = false;
     }
 
     IEnumerator DeathCoroutine()

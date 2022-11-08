@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36be5dfb1f223e744a828863cf4bf105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MovementData>k__BackingField: {fileID: 11400000, guid: df54064c42a368640bd346fcf7960737, type: 2}
+  <MovementData>k__BackingField: {fileID: 11400000, guid: c879284a5d4e97b4ea82739d2a442385, type: 2}
   currentVelocity: 0
   <OnVelocityChange>k__BackingField:
     m_PersistentCalls:
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Health>k__BackingField: 2
-  <MaxHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 5
   <OnDie>k__BackingField:
     m_PersistentCalls:
       m_Calls: []

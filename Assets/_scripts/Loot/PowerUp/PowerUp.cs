@@ -13,7 +13,7 @@ public class PowerUp : MonoBehaviour
     {
         Collider = GetComponent<BoxCollider2D>();
         Rigidbody = GetComponent<Rigidbody2D>();
-        Rigidbody.velocity = new Vector2((Random.value *2) - 1, (Random.value * 2) - 1);
+        Rigidbody.velocity = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         //waits just a moment so player can see what powerup just dropped
         Invoke("Enable", 1);
     }
