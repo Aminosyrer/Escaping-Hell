@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour, IAgent, IHittable
 {
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     [field: SerializeField]
     public int MaxHealth { get; set; }
+
+    [Range(0, 2)]
+    public float InvulnerableTime;
 
     private bool dead = false;
 
@@ -33,7 +37,7 @@ public class Player : MonoBehaviour, IAgent, IHittable
         {
             Health -= damage;
             invulnerable = true;
-            Invoke("MakeVulnerable", 0.5f);
+            Invoke("MakeVulnerable", InvulnerableTime);
             OnGetHit?.Invoke();
             if (Health <= 0)
             {

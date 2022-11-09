@@ -838,6 +838,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Health>k__BackingField: 2
   <MaxHealth>k__BackingField: 5
+  InvulnerableTime: 0.5
+  invulnerable: 0
   <OnDie>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
