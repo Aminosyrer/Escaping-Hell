@@ -25,4 +25,17 @@ public class RegularBullet : Bullet
         }           
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            HitObstacle();
+        }
+        Destroy(gameObject);
+    }
+
+    private void HitObstacle()
+    {
+        Debug.Log("Hitting Obstacle");
+    }
 }
