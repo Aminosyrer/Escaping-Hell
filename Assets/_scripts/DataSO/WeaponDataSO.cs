@@ -25,11 +25,11 @@ public class WeaponDataSO : ScriptableObject
     public float SpreadAngle { get; set; } = 5;
 
     [SerializeField]
-    private bool multiBulletShoot = false;
+    public bool multiBulletShoot = false;
 
     [SerializeField]
     [Range(1,10)]
-    private int bulletCount = 1;
+    public int bulletCount = 1;
 
     internal int GetBulletCountToSpawn()
     {

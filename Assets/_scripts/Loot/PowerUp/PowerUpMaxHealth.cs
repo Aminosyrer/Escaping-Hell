@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PowerUpMaxHealth : PowerUp
 {
     public int Increase;
+
+    private void Start()
+    {
+        gameObject.GetComponentInChildren<TextMeshPro>().SetText($"+{Increase} Max Health");
+    }
 
     private new void OnTriggerEnter2D(Collider2D collision)
     {
