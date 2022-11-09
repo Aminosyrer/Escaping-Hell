@@ -16,17 +16,20 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     protected WeaponDataSO weaponData;
 
+    [NonSerialized]
+    public WeaponDataSO mWeaponData;
+
     public int Ammo
     {
         get { return ammo; }
         set { 
-            ammo = Mathf.Clamp(value, 0, weaponData.AmmoCapacity);
+            ammo = Mathf.Clamp(value, 0, mWeaponData.AmmoCapacity);
             ammo = value; 
         }
     }
 
     //ammo full
-    public bool AmmoFull { get => Ammo >= weaponData.AmmoCapacity; }
+    public bool AmmoFull { get => Ammo >= mWeaponData.AmmoCapacity; }
 
     protected bool isShooting = false;
 
@@ -42,6 +45,9 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
+        // gives us some scriptable object we can change
+        mWeaponData = Instantiate(weaponData);
+        mWeaponData.BulletData = Instantiate(weaponData.BulletData);
         Ammo = weaponData.AmmoCapacity;
     }
 
@@ -73,7 +79,7 @@ public class Weapon : MonoBehaviour
             {
                 Ammo--;
                 OnShoot?.Invoke();
-                for (int i = 0; i < weaponData.GetBulletCountToSpawn(); i++)
+                for (int i = 0; i < mWeaponData.GetBulletCountToSpawn(); i++)
                 {
                     ShootBullet();
                 }
@@ -91,7 +97,7 @@ public class Weapon : MonoBehaviour
     private void FinishShooting()
     {
         StartCoroutine(DelayNextShootCoroutine());
-        if (weaponData.AutomaticFire == false )
+        if (mWeaponData.AutomaticFire == false )
         {
             isShooting = false;
         }
@@ -100,7 +106,7 @@ public class Weapon : MonoBehaviour
     protected IEnumerator DelayNextShootCoroutine()
     {
         ReloadCoroutine = true;
-        yield return new WaitForSeconds(weaponData.WeaponDelay);
+        yield return new WaitForSeconds(mWeaponData.WeaponDelay);
         ReloadCoroutine = false;
     }
      
@@ -111,14 +117,15 @@ public class Weapon : MonoBehaviour
 
     private void SpawnBullet(Vector3 position, Quaternion rotation)
     {
-        var bulletPrefab = Instantiate(weaponData.BulletData.bulletPrefab, position, rotation);
-        bulletPrefab.GetComponent<Bullet>().BulletData = weaponData.BulletData;
+        var bulletPrefab = Instantiate(mWeaponData.BulletData.bulletPrefab, position, rotation);
+        Debug.Log(mWeaponData.BulletData.Damage);
+        bulletPrefab.GetComponent<Bullet>().BulletData = mWeaponData.BulletData;
     }
 
     //Quaternion represent the rotation
     private Quaternion CalculateAngle(GameObject muzzle)
     {
-        float spread = Random.Range(-weaponData.SpreadAngle, weaponData.SpreadAngle);
+        float spread = Random.Range(-mWeaponData.SpreadAngle, mWeaponData.SpreadAngle);
         Quaternion bulletSpreadRotation = Quaternion.Euler(new Vector3(0, 0, spread));
         return muzzle.transform.rotation * bulletSpreadRotation;
     }
