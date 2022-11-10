@@ -31,7 +31,16 @@ public class RegularBullet : Bullet
         {
             HitObstacle();
         }
+        else if(collision.GetComponent<IHittable>() != null)
+        {
+            HitEnemy(collision);
+        }
         Destroy(gameObject);
+    }
+
+    private void HitEnemy(Collider2D collider)
+    {
+        collider.GetComponent<IHittable>().GetHit(bulletData.Damage, gameObject);
     }
 
     private void HitObstacle()

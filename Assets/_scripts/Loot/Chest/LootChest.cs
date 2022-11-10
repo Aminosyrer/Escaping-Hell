@@ -26,7 +26,6 @@ public class LootChest : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Opening chest");
             do
             {
                 int x = Random.Range(0, DroptableData.droptable.Count);
