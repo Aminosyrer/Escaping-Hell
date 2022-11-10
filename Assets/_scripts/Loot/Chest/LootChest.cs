@@ -26,14 +26,13 @@ public class LootChest : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Opening chest");
             do
             {
                 int x = Random.Range(0, DroptableData.droptable.Count);
-                //Best way to give a even chance for all entries in the droptable
-                if (x == DroptableData.droptable.Count) x = DroptableData.droptable.Count - 1;
                 Instantiate(DroptableData.droptable[x], transform.position, transform.rotation);
             }
-            while (DroptableData.ChanceForExtraDrops > Random.Range(0, 100));
+            while (DroptableData.ChanceForExtraDrops >= Random.Range(0, 101));
             _SpriteRenderer.sprite = OpenChest;
             Collider.enabled = false;
         }
