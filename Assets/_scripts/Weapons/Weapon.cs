@@ -79,9 +79,9 @@ public class Weapon : MonoBehaviour
             {
                 Ammo--;
                 OnShoot?.Invoke();
-                for (int i = 0; i < mWeaponData.GetBulletCountToSpawn(); i++)
+                for (int i = 0; i <= mWeaponData.GetBulletCountToSpawn(); i++)
                 {
-                    ShootBullet();
+                    ShootBullet(i);
                 }
             }
             else
@@ -110,9 +110,9 @@ public class Weapon : MonoBehaviour
         ReloadCoroutine = false;
     }
      
-    private void ShootBullet()
+    private void ShootBullet(int bulletCount)
     {
-        SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle));
+        SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle, bulletCount));
     }
 
     private void SpawnBullet(Vector3 position, Quaternion rotation)
@@ -123,10 +123,35 @@ public class Weapon : MonoBehaviour
     }
 
     //Quaternion represent the rotation
-    private Quaternion CalculateAngle(GameObject muzzle)
+    private Quaternion CalculateAngle(GameObject muzzle, int bulletCount)
     {
-        float spread = Random.Range(-mWeaponData.SpreadAngle, mWeaponData.SpreadAngle);
+        float spread = GetSpread(bulletCount);
         Quaternion bulletSpreadRotation = Quaternion.Euler(new Vector3(0, 0, spread));
         return muzzle.transform.rotation * bulletSpreadRotation;
+    }
+
+    private float GetSpread(int bulletCount)
+    {
+        if(bulletCount == 0)
+        {
+            if(mWeaponData.bulletCount % 2 == 1 || !mWeaponData.multiBulletShoot)
+            {
+                return 0;
+            }
+            else
+            {
+                return mWeaponData.SpreadAngle;
+            }
+        }
+        if (bulletCount % 2 == 0)
+        {
+            int x = bulletCount / 2;
+            return mWeaponData.SpreadAngle * x;
+        }
+        else
+        {
+            int x = Mathf.CeilToInt(bulletCount / 2);
+            return -mWeaponData.SpreadAngle * x;
+        }
     }
 }
