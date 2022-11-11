@@ -14,6 +14,9 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     [field: SerializeField]
     public EnemyAttack enemyAttack { get; set; }
 
+    [Range(0, 1)]
+    public float TimeToDie;
+
     private bool dead = false;
 
     [field: SerializeField]
@@ -53,7 +56,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
 
     IEnumerator WaitToDie()
     {
-        yield return new WaitForSeconds(.54f);
+        yield return new WaitForSeconds(TimeToDie);
         Destroy(gameObject);
     }
 

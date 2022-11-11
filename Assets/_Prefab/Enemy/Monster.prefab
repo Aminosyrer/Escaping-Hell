@@ -632,7 +632,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5770908941970557534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -686,6 +686,7 @@ MonoBehaviour:
   <EnemyData>k__BackingField: {fileID: 11400000, guid: 95a7731e4d7baab4a9ecde2752d9ee5a, type: 2}
   <Health>k__BackingField: 2
   <enemyAttack>k__BackingField: {fileID: 0}
+  TimeToDie: 0.1
   <OnGetHit>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
