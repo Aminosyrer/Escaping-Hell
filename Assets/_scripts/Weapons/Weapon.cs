@@ -150,7 +150,7 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            int x = Mathf.CeilToInt(bulletCount / 2);
+            int x = Mathf.CeilToInt(bulletCount / 2f);
             return -mWeaponData.SpreadAngle * x;
         }
     }

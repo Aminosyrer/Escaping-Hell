@@ -27,9 +27,14 @@ public class Player : MonoBehaviour, IAgent, IHittable
     [field: SerializeField]
     public UnityEvent OnGetHit { get; set; }
 
+    // first int = health, second int = maxhealth
+    [field: SerializeField]
+    public UnityEvent<int, int> OnHealthChange;
+
     public void Awake()
     {
         Health = MaxHealth;
+        OnHealthChange?.Invoke(Health, MaxHealth);
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -40,6 +45,7 @@ public class Player : MonoBehaviour, IAgent, IHittable
             invulnerable = true;
             Invoke("MakeVulnerable", InvulnerableTime);
             OnGetHit?.Invoke();
+            OnHealthChange?.Invoke(Health, MaxHealth);
             if (Health <= 0)
             {
                 OnDie?.Invoke();
@@ -47,6 +53,13 @@ public class Player : MonoBehaviour, IAgent, IHittable
                 StartCoroutine(DeathCoroutine());
             }
         }
+    }
+
+    public  void Heal(int increase, bool BoostMax = false)
+    {
+        Health += increase;
+        if (BoostMax) MaxHealth += increase;
+        OnHealthChange?.Invoke(Health, MaxHealth);
     }
 
     private void MakeVulnerable()

@@ -20,8 +20,7 @@ public class PowerUpMaxHealth : PowerUp
             //if this is ever null, i will stab a bitch
             if (player != null)
             {
-                player.Health += Increase;
-                player.MaxHealth += Increase;
+                player.Heal(Increase, true);
             }
             Destroy(gameObject);
         }
