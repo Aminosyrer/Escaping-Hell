@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     [NonSerialized]
     public WeaponDataSO mWeaponData;
 
+    public UnityEvent<int> OnAmmoChange;
+
     public int Ammo
     {
         get { return ammo; }
@@ -49,6 +51,7 @@ public class Weapon : MonoBehaviour
         mWeaponData = Instantiate(weaponData);
         mWeaponData.BulletData = Instantiate(weaponData.BulletData);
         Ammo = weaponData.AmmoCapacity;
+        OnAmmoChange?.Invoke(Ammo);
     }
 
     public void TryShooying()
@@ -63,7 +66,8 @@ public class Weapon : MonoBehaviour
 
     public void Realod(int ammo)
     {
-        Ammo += ammo;
+        Ammo = Mathf.Clamp(Ammo + ammo, 0, mWeaponData.AmmoCapacity);
+        OnAmmoChange?.Invoke(Ammo);
     }
 
     private void Update()
@@ -78,6 +82,7 @@ public class Weapon : MonoBehaviour
             if (Ammo > 0)
             {
                 Ammo--;
+                OnAmmoChange?.Invoke(Ammo);
                 OnShoot?.Invoke();
                 for (int i = 0; i <= mWeaponData.GetBulletCountToSpawn(); i++)
                 {

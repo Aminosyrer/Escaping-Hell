@@ -57,8 +57,8 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     public  void Heal(int increase, bool BoostMax = false)
     {
-        Health += increase;
         if (BoostMax) MaxHealth += increase;
+        Health = Mathf.Clamp(Health + increase, 0, MaxHealth);
         OnHealthChange?.Invoke(Health, MaxHealth);
     }
 
