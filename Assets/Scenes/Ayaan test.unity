@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 328066654}
   - component: {fileID: 328066656}
   - component: {fileID: 328066655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2060,6 +2060,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.07253582
       objectReference: {fileID: 0}
+    - target: {fileID: 4006360026457852799, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026457852799, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043492, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2077,12 +2085,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4006360026627043493, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_LocalPosition.z
