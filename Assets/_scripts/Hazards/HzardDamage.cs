@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class HzardDamage : MonoBehaviour
 {
+    public int damage;
+
     public void DoDamage()
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale / 2, 0);
-        Debug.Log(colliders.Length);
         foreach(var i in colliders)
         {
-            Destroy(i.gameObject);
+            if (i.GetComponent<IHittable>() != null)
+            {
+                i.GetComponent<IHittable>().GetHit(damage, gameObject);
+            }
         }
     }
 }

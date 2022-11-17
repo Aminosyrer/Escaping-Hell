@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AgentInput : MonoBehaviour
+public class AgentInput : MonoBehaviour, IAgentInput
 {
     private Camera mainCamera;
     private bool fireButtonDown = false;
@@ -17,7 +17,7 @@ public class AgentInput : MonoBehaviour
     public UnityEvent<Vector2> OnPointerPostionChangeView { get; set; }
 
     [field: SerializeField]
-    public UnityEvent<Vector2> OnPointerPostionChangeWorld { get; set; }
+    public UnityEvent<Vector2> OnPointerPostionChange { get; set; }
 
     [field: SerializeField]
     public UnityEvent OnFireButtonPressed { get; set; }
@@ -64,7 +64,7 @@ public class AgentInput : MonoBehaviour
         var mouseInView = mainCamera.ScreenToViewportPoint(mousPos);
         var mouseInWorld = mainCamera.ScreenToWorldPoint(mousPos);
         OnPointerPostionChangeView?.Invoke(mouseInView);
-        OnPointerPostionChangeWorld?.Invoke(mouseInWorld);
+        OnPointerPostionChange?.Invoke(mouseInWorld);
     }
 
     private void GetMovementInput()

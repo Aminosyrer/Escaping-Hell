@@ -16,17 +16,20 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     protected WeaponDataSO weaponData;
 
+    [NonSerialized]
+    public WeaponDataSO mWeaponData;
+
     public int Ammo
     {
         get { return ammo; }
         set { 
-            ammo = Mathf.Clamp(value, 0, weaponData.AmmoCapacity);
+            ammo = Mathf.Clamp(value, 0, mWeaponData.AmmoCapacity);
             ammo = value; 
         }
     }
 
     //ammo full
-    public bool AmmoFull { get => Ammo >= weaponData.AmmoCapacity; }
+    public bool AmmoFull { get => Ammo >= mWeaponData.AmmoCapacity; }
 
     protected bool isShooting = false;
 
@@ -42,6 +45,9 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
+        // gives us some scriptable object we can change
+        mWeaponData = Instantiate(weaponData);
+        mWeaponData.BulletData = Instantiate(weaponData.BulletData);
         Ammo = weaponData.AmmoCapacity;
     }
 
@@ -73,9 +79,9 @@ public class Weapon : MonoBehaviour
             {
                 Ammo--;
                 OnShoot?.Invoke();
-                for (int i = 0; i < weaponData.GetBulletCountToSpawn(); i++)
+                for (int i = 0; i <= mWeaponData.GetBulletCountToSpawn(); i++)
                 {
-                    ShootBullet();
+                    ShootBullet(i);
                 }
             }
             else
@@ -91,7 +97,7 @@ public class Weapon : MonoBehaviour
     private void FinishShooting()
     {
         StartCoroutine(DelayNextShootCoroutine());
-        if (weaponData.AutomaticFire == false )
+        if (mWeaponData.AutomaticFire == false )
         {
             isShooting = false;
         }
@@ -100,26 +106,52 @@ public class Weapon : MonoBehaviour
     protected IEnumerator DelayNextShootCoroutine()
     {
         ReloadCoroutine = true;
-        yield return new WaitForSeconds(weaponData.WeaponDelay);
+        yield return new WaitForSeconds(mWeaponData.WeaponDelay);
         ReloadCoroutine = false;
     }
      
-    private void ShootBullet()
+    private void ShootBullet(int bulletCount)
     {
-        SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle));
+        SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle, bulletCount));
     }
 
     private void SpawnBullet(Vector3 position, Quaternion rotation)
     {
-        var bulletPrefab = Instantiate(weaponData.BulletData.bulletPrefab, position, rotation);
-        bulletPrefab.GetComponent<Bullet>().BulletData = weaponData.BulletData;
+        var bulletPrefab = Instantiate(mWeaponData.BulletData.bulletPrefab, position, rotation);
+        Debug.Log(mWeaponData.BulletData.Damage);
+        bulletPrefab.GetComponent<Bullet>().BulletData = mWeaponData.BulletData;
     }
 
     //Quaternion represent the rotation
-    private Quaternion CalculateAngle(GameObject muzzle)
+    private Quaternion CalculateAngle(GameObject muzzle, int bulletCount)
     {
-        float spread = Random.Range(-weaponData.SpreadAngle, weaponData.SpreadAngle);
+        float spread = GetSpread(bulletCount);
         Quaternion bulletSpreadRotation = Quaternion.Euler(new Vector3(0, 0, spread));
         return muzzle.transform.rotation * bulletSpreadRotation;
+    }
+
+    private float GetSpread(int bulletCount)
+    {
+        if(bulletCount == 0)
+        {
+            if(mWeaponData.bulletCount % 2 == 1 || !mWeaponData.multiBulletShoot)
+            {
+                return 0;
+            }
+            else
+            {
+                return mWeaponData.SpreadAngle;
+            }
+        }
+        if (bulletCount % 2 == 0)
+        {
+            int x = bulletCount / 2;
+            return mWeaponData.SpreadAngle * x;
+        }
+        else
+        {
+            int x = Mathf.CeilToInt(bulletCount / 2);
+            return -mWeaponData.SpreadAngle * x;
+        }
     }
 }
