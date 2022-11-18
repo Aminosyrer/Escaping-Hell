@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     {
         if(dead == false)
         {
+            Debug.Log("aw");
             Health -= damage;
             OnGetHit?.Invoke();
             if (Health <= 0)
