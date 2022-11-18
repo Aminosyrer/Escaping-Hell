@@ -26,6 +26,9 @@ public class AgentWeapon : MonoBehaviour
     }
 
     // her laver vi aimweapon til player, så vore gun pointer den rigtige vej
+    // Quaternion bruges til når man skal rotere
+    // Mathf.Atan2 retunere vinklen. 
+    //Returværdi er vinklen mellem x-aksen og en 2D-vektor, der starter ved nul og slutter ved (x,y).
     public virtual void AimWeapon(Vector2 pointerPosition)
     {
         var aimDirection = (Vector3) pointerPosition - transform.position;
