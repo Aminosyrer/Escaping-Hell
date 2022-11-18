@@ -135,6 +135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646757693, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1700623857, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Size.x
       value: 0.8
@@ -147,6 +151,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1934532499375850772, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006360026457852792, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: stepClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6561845954b5ba14c9ed96ffec42193b, type: 3}
     - target: {fileID: 4006360026457852796, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
       propertyPath: m_Controller
       value: 
@@ -303,6 +315,10 @@ PrefabInstance:
       propertyPath: <OnPointerPostionChange>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6730708478048749494, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4006360026457852794, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
     - {fileID: 4006360026457852795, guid: f0f2be6fcaa191b4cb9fedf2d9abbd79, type: 3}
@@ -342,10 +358,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Health>k__BackingField: 2
+  <MaxHealth>k__BackingField: 0
+  InvulnerableTime: 0
+  invulnerable: 0
   <OnDie>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   <OnGetHit>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &7581819252427308583 stripped
