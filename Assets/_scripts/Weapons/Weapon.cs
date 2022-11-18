@@ -51,16 +51,19 @@ public class Weapon : MonoBehaviour
         Ammo = weaponData.AmmoCapacity;
     }
 
+    // når man klikker så skyder den
     public void TryShooying()
     {
         isShooting = true;
     }
 
+    //når man slipper knappen så stopper den med at skyde
     public void StopShooting()
     {
        isShooting = false;
     }
 
+    //reload ammo
     public void Realod(int ammo)
     {
         Ammo += ammo;
