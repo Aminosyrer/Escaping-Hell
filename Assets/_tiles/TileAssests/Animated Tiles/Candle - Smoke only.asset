@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Candle - Smoke only
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -1218583606, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 1013401150, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 1498039006, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -1997125560, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -1601518417, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 1628987468, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 2077114675, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 943047539, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -695019174, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -1982767049, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 611197515, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -739142599, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -814622002, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 460988107, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 1310711386, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -1123345209, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: 182125496, guid: 766f675257608444f852ef6769878f55, type: 3}
+  - {fileID: -247419312, guid: 766f675257608444f852ef6769878f55, type: 3}
+  m_MinSpeed: 19
+  m_MaxSpeed: 19
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
