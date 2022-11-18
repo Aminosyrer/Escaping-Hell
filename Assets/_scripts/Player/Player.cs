@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IAgent, IHittable
 {
@@ -66,8 +67,8 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     IEnumerator DeathCoroutine()
     {
-        yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(0);
     }
 
 }
