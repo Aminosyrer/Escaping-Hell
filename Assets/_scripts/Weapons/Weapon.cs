@@ -54,16 +54,19 @@ public class Weapon : MonoBehaviour
         OnAmmoChange?.Invoke(Ammo);
     }
 
+    // når man klikker så skyder den
     public void TryShooying()
     {
         isShooting = true;
     }
 
+    //når man slipper knappen så stopper den med at skyde
     public void StopShooting()
     {
        isShooting = false;
     }
 
+    //reload ammo
     public void Realod(int ammo)
     {
         Ammo = Mathf.Clamp(Ammo + ammo, 0, mWeaponData.AmmoCapacity);

@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     //quit the game
     public void QuitGame()
     {
+        //Debug.Log tjekker om spillet quitter
         Debug.Log("QUIT");
         Application.Quit();
     }

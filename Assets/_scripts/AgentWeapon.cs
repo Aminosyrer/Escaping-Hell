@@ -13,7 +13,7 @@ public class AgentWeapon : MonoBehaviour
     [SerializeField]
     protected Weapon weapon;
 
-
+    // awake kaldes når ens script bliver åbnet, eller hvis et objekt 
     private void Awake()
     {
         AssignWeapon();
@@ -25,6 +25,10 @@ public class AgentWeapon : MonoBehaviour
         weapon = GetComponentInChildren<Weapon>();
     }
 
+    // her laver vi aimweapon til player, så vore gun pointer den rigtige vej
+    // Quaternion bruges til når man skal rotere
+    // Mathf.Atan2 retunere vinklen. 
+    //Returværdi er vinklen mellem x-aksen og en 2D-vektor, der starter ved nul og slutter ved (x,y).
     public virtual void AimWeapon(Vector2 pointerPosition)
     {
         var aimDirection = (Vector3) pointerPosition - transform.position;
@@ -33,6 +37,8 @@ public class AgentWeapon : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(desiredAngle, Vector3.forward);
     }
 
+    //her adjuster vi ved at flipspirte (gun),
+    //og hvis man henter gun bag over hovedet så vender den vores gun og player
     protected void AdjustWeaponRendering()
     {
 
@@ -44,12 +50,14 @@ public class AgentWeapon : MonoBehaviour
         }   
     }
 
+    // skyder
     public void Shoot()
     {
         if(weapon != null)
             weapon.TryShooying();
     }
 
+    //stops shooting
     public void StopShooting()
     {
         if (weapon != null)

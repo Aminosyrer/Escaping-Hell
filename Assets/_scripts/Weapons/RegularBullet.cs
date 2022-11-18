@@ -25,6 +25,8 @@ public class RegularBullet : Bullet
         }           
     }
 
+    // her laver vi koden så hvergang vi skyder en bullet og den rammer en "obstacle"
+    // så vil bullet under "hierarchy" ikke blive stablet op men den forsvinder
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
@@ -38,11 +40,13 @@ public class RegularBullet : Bullet
         Destroy(gameObject);
     }
 
+    //dette er det samme, men denne gang er det collider med enemy
     private void HitEnemy(Collider2D collider)
     {
         collider.GetComponent<IHittable>().GetHit(bulletData.Damage, gameObject);
     }
 
+    //her tjekker vi med en Debug.Log hvis man rammer "obstacle" forsvinder den så?
     private void HitObstacle()
     {
         Debug.Log("Hitting Obstacle");

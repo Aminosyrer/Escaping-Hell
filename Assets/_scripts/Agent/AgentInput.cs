@@ -30,6 +30,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
         mainCamera = Camera.main;
     }
 
+    //opdatere vores GetMovementInput, GetPointerInput og GetFireInput
     private void Update()
     {
         GetMovementInput();
@@ -37,6 +38,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
         GetFireInput();
     }
 
+    // metode som viser hvordan vi skyder
     private void GetFireInput()
     {
         if (Input.GetAxisRaw("Fire1") > 0)
@@ -57,6 +59,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
         }
     }
 
+    // pointer position for vores mus, så den følger med vore main kamera
     private void GetPointerInput()
     {
         Vector3 mousPos = Input.mousePosition;
@@ -67,6 +70,7 @@ public class AgentInput : MonoBehaviour, IAgentInput
         OnPointerPostionChange?.Invoke(mouseInWorld);
     }
 
+    //dette er vores movement for vore player, de kan bevæge sig Horizontal eller Vertical
     private void GetMovementInput()
     {
         OnMovementKeyPressed?.Invoke(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));

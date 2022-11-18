@@ -7,7 +7,7 @@ public class AgentStepAudio : AudioPlayer
     [SerializeField]
     protected AudioClip stepClip;
 
-
+    //hvergang vore player stepper så kommer der step-lyd
     public void PlayStepSound()
     {
         PlayClipWithRandomness(stepClip);
