@@ -84,7 +84,7 @@ public class Weapon : MonoBehaviour
                 Ammo--;
                 OnAmmoChange?.Invoke(Ammo);
                 OnShoot?.Invoke();
-                for (int i = 0; i <= mWeaponData.GetBulletCountToSpawn(); i++)
+                for (int i = 0; i < mWeaponData.GetBulletCountToSpawn(); i++)
                 {
                     ShootBullet(i);
                 }
