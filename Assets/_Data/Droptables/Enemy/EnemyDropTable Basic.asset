@@ -15,5 +15,7 @@ MonoBehaviour:
   Items:
   - go: {fileID: 8795811961598758133, guid: 6862b09d14c0d604eb27b1b3254b05fb, type: 3}
     Weight: 1
+  - go: {fileID: 9116398531085801454, guid: 938a1ca1973fccf4b98a0a951cf15697, type: 3}
+    Weight: 1
   ChanceForExtraDrops: 5
-  ChanceForDrop: 100
+  ChanceForDrop: 25
