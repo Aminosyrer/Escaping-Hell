@@ -49,11 +49,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Size.x
-      value: 0.4
+      value: 0.7355656
       objectReference: {fileID: 0}
     - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Size.y
-      value: 0.4
+      value: 0.5729773
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.13480982
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07437744
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5770908941970557530, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: <OnVelocityChange>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target

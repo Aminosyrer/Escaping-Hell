@@ -7,9 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 39711177, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 579673889, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 730493895, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 848432727, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: <Distance>k__BackingField
@@ -22,6 +30,22 @@ PrefabInstance:
     - target: {fileID: 1609823608, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0725209
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3951225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.15796763
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.061300874
       objectReference: {fileID: 0}
     - target: {fileID: 5770908941970557530, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: <MovementData>k__BackingField

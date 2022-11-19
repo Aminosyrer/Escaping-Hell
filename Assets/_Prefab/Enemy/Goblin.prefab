@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5041416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6556987
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.09326589
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.12215063
+      objectReference: {fileID: 0}
     - target: {fileID: 5770908941970557534, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Name
       value: Goblin

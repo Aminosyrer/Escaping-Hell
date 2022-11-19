@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BruteMovementData
   m_EditorClassIdentifier: 
   maxSpeed: 10
-  acceleration: 2
-  deacceleration: 2
+  acceleration: 1.5
+  deacceleration: 1.5

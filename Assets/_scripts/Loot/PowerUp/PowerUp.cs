@@ -21,7 +21,7 @@ public class PowerUp : MonoBehaviour
 
     private void Enable()
     {
-        gameObject.layer = 0;
+        gameObject.layer = 13;
         Rigidbody.velocity = Vector2.zero;
         Collider.isTrigger = true;
     }
