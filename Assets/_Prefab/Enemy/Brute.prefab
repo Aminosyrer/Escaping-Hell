@@ -111,5 +111,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -486309668871112138, guid: de183585fbb72d54eafbd101ebd2fed2, type: 3}
+    - target: {fileID: 9175417502846364822, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: dropTable
+      value: 
+      objectReference: {fileID: 11400000, guid: 805e5e6ada5e95144b98782643394b49, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
