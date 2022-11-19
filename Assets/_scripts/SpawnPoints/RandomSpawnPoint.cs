@@ -15,7 +15,7 @@ public class RandomSpawnPoint : MonoBehaviour
         {
             int x = Mathf.RoundToInt(Random.value * (ObjectsToSpawn.Count - 1));
             Instantiate(ObjectsToSpawn[x], transform.position, transform.rotation);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
