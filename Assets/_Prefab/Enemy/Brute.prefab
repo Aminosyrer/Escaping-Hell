@@ -7,10 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 579673889, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 848432727, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1609823599, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: <EnemyData>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 05695459ba7e5264dbfe430c6b7b9f2e, type: 2}
+    - target: {fileID: 1609823608, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770908941970557530, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: <MovementData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: b9d63a5dbc9300d4da77c4aab6b4c126, type: 2}
     - target: {fileID: 5770908941970557534, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Name
       value: Brute

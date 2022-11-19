@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AssultRifleWeaponData
   m_EditorClassIdentifier: 
   <BulletData>k__BackingField: {fileID: 11400000, guid: 96db7f8127f708544b5420209ba6642e, type: 2}
-  <AmmoCapacity>k__BackingField: 100
+  <AmmoCapacity>k__BackingField: 200
   <AutomaticFire>k__BackingField: 1
   <WeaponDelay>k__BackingField: 0.2
   <SpreadAngle>k__BackingField: 3

@@ -6,7 +6,7 @@ public class DistanceDecision : AIDecision
 {
     [field: SerializeField]
     [field: Range(0.1f, 10)]
-    public float Distance { get; set; } = 5;
+    public float Distance { get; set; } = 10;
 
     public override bool MakeADecision()
     {
