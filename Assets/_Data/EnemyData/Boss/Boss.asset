@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce387e0a591818b4faeb948854efa684, type: 3}
   m_Name: Boss
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 3
-  <Damage>k__BackingField: 1
+  <MaxHealth>k__BackingField: 40
+  <Damage>k__BackingField: 3
