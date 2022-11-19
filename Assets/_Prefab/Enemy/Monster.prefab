@@ -529,8 +529,6 @@ GameObject:
   - component: {fileID: 5770908941970557531}
   - component: {fileID: 5770908941970557530}
   - component: {fileID: 2780265037541205776}
-  - component: {fileID: 1609823608}
-  - component: {fileID: 1609823598}
   - component: {fileID: 1609823599}
   - component: {fileID: 1609823600}
   - component: {fileID: 1609823611}
@@ -598,7 +596,7 @@ MonoBehaviour:
   <OnVelocityChange>k__BackingField:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8978178683840360168}
         m_TargetAssemblyTypeName: AgentAnimations, Assembly-CSharp
         m_MethodName: AnimatePlayer
         m_Mode: 0
@@ -626,52 +624,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.14, y: 0}
   m_Size: {x: 0.7, y: 0.9}
   m_Direction: 0
---- !u!61 &1609823608
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770908941970557534}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.01}
-  m_EdgeRadius: 0
---- !u!95 &1609823598
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770908941970557534}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 4949a6c212042f8419ac798dfe666654, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1609823599
 MonoBehaviour:
   m_ObjectHideFlags: 0
