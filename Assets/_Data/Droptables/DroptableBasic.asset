@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - go: {fileID: 2275578202166322489, guid: 3969904d7185dc345a87e9c0b34f2ade, type: 3}
-    Weight: 1
+    Weight: 3
   - go: {fileID: 272479562190368114, guid: 6c8f20b232401ff4598d6cf4e4f964b5, type: 3}
-    Weight: 1
+    Weight: 2
   - go: {fileID: 2277577726736747141, guid: f99d228b0375f4d4b8d64669e1be97e7, type: 3}
-    Weight: 1
+    Weight: 2
   - go: {fileID: 5218772664536471731, guid: 0f4a8aa08bd0e994c8363ad9606eea40, type: 3}
     Weight: 1
   - go: {fileID: 4466873905803763443, guid: b322620b2c28a5642bd172df0f247366, type: 3}
-    Weight: 1
+    Weight: 2
   - go: {fileID: 730486988584125601, guid: 616dca2fb54a22d4faed18d7d2601455, type: 3}
-    Weight: 1
-  - go: {fileID: 4929675647705850866, guid: 18c636ae9e70eb647a10eab5faf62add, type: 3}
-    Weight: 1
+    Weight: 2
+  - go: {fileID: 333371590104399160, guid: b8b581c8a2f7b7e45bda5acb8166575a, type: 3}
+    Weight: 3
   ChanceForExtraDrops: 10
