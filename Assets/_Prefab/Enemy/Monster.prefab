@@ -646,9 +646,9 @@ MonoBehaviour:
   <OnPointerPostionChange>k__BackingField:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AgentAnimationUpDown, Assembly-CSharp
-        m_MethodName: AnimatePlayerDirection
+      - m_Target: {fileID: 7296671457450751993}
+        m_TargetAssemblyTypeName: EnemyRenderer, Assembly-CSharp
+        m_MethodName: FaceDirection
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -721,6 +721,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   movementData: {fileID: 11400000, guid: df54064c42a368640bd346fcf7960737, type: 2}
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8978178683840360168}
+        m_TargetAssemblyTypeName: AgentAnimations, Assembly-CSharp
+        m_MethodName: setWalkAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5770908942074016132
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +750,7 @@ GameObject:
   - component: {fileID: 5770908942074016131}
   - component: {fileID: 5770908942074016130}
   - component: {fileID: 8978178683840360168}
+  - component: {fileID: 7296671457450751993}
   m_Layer: 11
   m_Name: Monster
   m_TagString: Untagged
@@ -949,6 +965,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 916bda6cb979b6b41b49754262316596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7296671457450751993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770908942074016132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c813d89b3386c547bc5a3ebcabc62c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7462200891388715520
