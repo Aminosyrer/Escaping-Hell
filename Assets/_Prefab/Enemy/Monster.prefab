@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf6c5eafe40a10429eea93a5a5e1914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Distance>k__BackingField: 9
+  <Distance>k__BackingField: 8
 --- !u!1 &2050078234
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,13 +526,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5770908941970557535}
-  - component: {fileID: 5770908941970557531}
-  - component: {fileID: 5770908941970557530}
   - component: {fileID: 2780265037541205776}
   - component: {fileID: 1609823599}
   - component: {fileID: 1609823600}
   - component: {fileID: 1609823611}
   - component: {fileID: 9175417502846364822}
+  - component: {fileID: 1217690967087077270}
+  - component: {fileID: 2721321692177248768}
   m_Layer: 11
   m_Name: Monster
   m_TagString: Untagged
@@ -548,7 +548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5770908941970557534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.53, y: 0.27, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -558,56 +558,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &5770908941970557531
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770908941970557534}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &5770908941970557530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770908941970557534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36be5dfb1f223e744a828863cf4bf105, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MovementData>k__BackingField: {fileID: 11400000, guid: df54064c42a368640bd346fcf7960737, type: 2}
-  currentVelocity: 0
-  <OnVelocityChange>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8978178683840360168}
-        m_TargetAssemblyTypeName: AgentAnimations, Assembly-CSharp
-        m_MethodName: AnimatePlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!70 &2780265037541205776
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -692,25 +642,13 @@ MonoBehaviour:
       m_Calls: []
   <OnMovementKeyPressed>k__BackingField:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5770908941970557530}
-        m_TargetAssemblyTypeName: AgentMovement, Assembly-CSharp
-        m_MethodName: MoveAgent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   <OnPointerPostionChange>k__BackingField:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AgentAnimationUpDown, Assembly-CSharp
-        m_MethodName: AnimatePlayerDirection
+      - m_Target: {fileID: 7296671457450751993}
+        m_TargetAssemblyTypeName: EnemyRenderer, Assembly-CSharp
+        m_MethodName: FaceDirection
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -720,6 +658,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NavHandler: {fileID: 2721321692177248768}
 --- !u!114 &1609823611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,6 +685,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropTable: {fileID: 11400000, guid: 57ea669ce32a5654382b8f12029bd8c7, type: 2}
+--- !u!195 &1217690967087077270
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770908941970557534}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2721321692177248768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770908941970557534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a103a3f9afb566a47b4ed03a465265a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  movementData: {fileID: 11400000, guid: df54064c42a368640bd346fcf7960737, type: 2}
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8978178683840360168}
+        m_TargetAssemblyTypeName: AgentAnimations, Assembly-CSharp
+        m_MethodName: setWalkAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5770908942074016132
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +750,7 @@ GameObject:
   - component: {fileID: 5770908942074016131}
   - component: {fileID: 5770908942074016130}
   - component: {fileID: 8978178683840360168}
+  - component: {fileID: 7296671457450751993}
   m_Layer: 11
   m_Name: Monster
   m_TagString: Untagged
@@ -974,6 +965,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 916bda6cb979b6b41b49754262316596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7296671457450751993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770908942074016132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c813d89b3386c547bc5a3ebcabc62c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7462200891388715520

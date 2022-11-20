@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 6795588787402564191}
   - component: {fileID: 6795588787402564190}
   - component: {fileID: 8268680478060084532}
+  - component: {fileID: 1470495086623131217}
   m_Layer: 11
   m_Name: Monster
   m_TagString: Untagged
@@ -747,6 +748,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916bda6cb979b6b41b49754262316596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1470495086623131217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795588787402564184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c813d89b3386c547bc5a3ebcabc62c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6795588787909187970
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,14 +769,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6795588787909187971}
-  - component: {fileID: 6795588787909187975}
-  - component: {fileID: 6795588787909187974}
   - component: {fileID: 2940244408670844108}
   - component: {fileID: 1033757414920316595}
   - component: {fileID: 1033757414920316588}
   - component: {fileID: 1033757414920316583}
   - component: {fileID: 8146173343611797322}
   - component: {fileID: 2399368030965586134}
+  - component: {fileID: 6146152768477261542}
+  - component: {fileID: 7163608610546355173}
   m_Layer: 11
   m_Name: Boss
   m_TagString: Untagged
@@ -789,56 +802,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &6795588787909187975
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6795588787909187970}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &6795588787909187974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6795588787909187970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36be5dfb1f223e744a828863cf4bf105, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MovementData>k__BackingField: {fileID: 11400000, guid: df54064c42a368640bd346fcf7960737, type: 2}
-  currentVelocity: 0
-  <OnVelocityChange>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8268680478060084532}
-        m_TargetAssemblyTypeName: AgentAnimations, Assembly-CSharp
-        m_MethodName: AnimatePlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!70 &2940244408670844108
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -935,25 +898,13 @@ MonoBehaviour:
       m_Calls: []
   <OnMovementKeyPressed>k__BackingField:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6795588787909187974}
-        m_TargetAssemblyTypeName: AgentMovement, Assembly-CSharp
-        m_MethodName: MoveAgent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   <OnPointerPostionChange>k__BackingField:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AgentAnimationUpDown, Assembly-CSharp
-        m_MethodName: AnimatePlayerDirection
+      - m_Target: {fileID: 1470495086623131217}
+        m_TargetAssemblyTypeName: EnemyRenderer, Assembly-CSharp
+        m_MethodName: FaceDirection
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -963,6 +914,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NavHandler: {fileID: 0}
 --- !u!114 &1033757414920316583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,6 +954,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Exit: {fileID: 8337723105209606699, guid: b3a98641dcad3d74fb93e21f31fbebbe, type: 3}
+--- !u!114 &6146152768477261542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795588787909187970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a103a3f9afb566a47b4ed03a465265a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  movementData: {fileID: 11400000, guid: df54064c42a368640bd346fcf7960737, type: 2}
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8268680478060084532}
+        m_TargetAssemblyTypeName: AgentAnimations, Assembly-CSharp
+        m_MethodName: setWalkAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!195 &7163608610546355173
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795588787909187970}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.75
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.7
+  m_BaseOffset: 0.85
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7626763267450368476
 GameObject:
   m_ObjectHideFlags: 0

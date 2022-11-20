@@ -22,11 +22,12 @@ public class EnemyAIBrain : MonoBehaviour, IAgentInput
     [field: SerializeField]
     public UnityEvent<Vector2> OnPointerPostionChange { get; set; }
 
-
+    public NavMeshHandler NavHandler;
 
     private void Awake()
     {
         Target = FindObjectOfType<Player>().gameObject;
+        NavHandler = GetComponent<NavMeshHandler>();
     }
 
     private void Update()

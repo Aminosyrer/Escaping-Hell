@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 441211d5cab46f741beebf018b465ad3, type: 3}
+    - target: {fileID: 6390145348027054802, guid: 6862b09d14c0d604eb27b1b3254b05fb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8795811961598758133, guid: 6862b09d14c0d604eb27b1b3254b05fb, type: 3}
       propertyPath: m_Name
       value: "\xC1mmoDrop"
