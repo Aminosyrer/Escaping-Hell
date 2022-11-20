@@ -16,7 +16,7 @@ MonoBehaviour:
   - go: {fileID: 2275578202166322489, guid: 3969904d7185dc345a87e9c0b34f2ade, type: 3}
     Weight: 3
   - go: {fileID: 272479562190368114, guid: 6c8f20b232401ff4598d6cf4e4f964b5, type: 3}
-    Weight: 2
+    Weight: 1
   - go: {fileID: 2277577726736747141, guid: f99d228b0375f4d4b8d64669e1be97e7, type: 3}
     Weight: 2
   - go: {fileID: 5218772664536471731, guid: 0f4a8aa08bd0e994c8363ad9606eea40, type: 3}
