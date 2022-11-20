@@ -31,6 +31,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Height
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721321692177248768, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: movementData
+      value: 
+      objectReference: {fileID: 11400000, guid: b9d63a5dbc9300d4da77c4aab6b4c126, type: 2}
     - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Size.x
       value: 1.0725209
