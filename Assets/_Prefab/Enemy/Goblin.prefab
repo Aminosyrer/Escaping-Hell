@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: NavHandler
       value: 
       objectReference: {fileID: 6122347324092537035}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Height
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 2780265037541205776, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Size.x
       value: 0.5041416

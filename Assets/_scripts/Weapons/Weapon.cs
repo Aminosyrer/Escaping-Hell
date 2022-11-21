@@ -120,13 +120,20 @@ public class Weapon : MonoBehaviour
      
     private void ShootBullet(int bulletCount)
     {
-        SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle, bulletCount));
+        if (Physics2D.OverlapBoxAll(transform.position, transform.localScale / 2, 0).Length < 2)
+        {
+            SpawnBullet(muzzle.transform.position, CalculateAngle(muzzle, bulletCount));
+        }
+        else
+        {
+            SpawnBullet(transform.position, CalculateAngle(muzzle, bulletCount));
+        }
+        
     }
 
     private void SpawnBullet(Vector3 position, Quaternion rotation)
     {
         var bulletPrefab = Instantiate(mWeaponData.BulletData.bulletPrefab, position, rotation);
-        Debug.Log(mWeaponData.BulletData.Damage);
         bulletPrefab.GetComponent<Bullet>().BulletData = mWeaponData.BulletData;
     }
 
