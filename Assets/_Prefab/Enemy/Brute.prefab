@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2062828035, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1217690967087077270, guid: 181a93bddf109ac49a3fa082f66aba04, type: 3}
       propertyPath: m_Height
       value: 1.4
