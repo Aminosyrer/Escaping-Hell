@@ -30,6 +30,7 @@ public abstract class AudioPlayer : MonoBehaviour
         PlayClip(clip);
     }
 
+    // her asfspiller den de metoder vi har lavet for audio.
     protected void PlayClip(AudioClip clip)
     {
         audioSource.Stop();
